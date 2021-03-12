@@ -111,6 +111,7 @@ module.exports = {
     extensions: ['.js', '.json', '.png'],
     alias: {
       src: path.resolve(__dirname, 'src/'),
+      components: path.resolve(__dirname, 'src/components/'),
     },
   },
   optimization: optimization(),

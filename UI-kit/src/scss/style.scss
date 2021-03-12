@@ -1,4 +1,8 @@
 @import "./vars.scss";
-@import "./mixins.scss";
 @import "./normalize.scss";
 @import "./fonts.scss";
+
+h1 {
+    color: $shade100;
+    font-weight: bold;
+}
