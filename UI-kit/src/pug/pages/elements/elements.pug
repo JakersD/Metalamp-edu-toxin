@@ -1,0 +1,14 @@
+extends ../../layouts/main
+include ../../../components/textField/textField
+
+block variables
+    - var title = 'Form Elements';
+
+block content
+    .elements__container
+        .elements__block
+            .elements__column
+                +textField('textId', 'text field', 'Email', 'mail')
+        .elements__block
+
+        .elements__block

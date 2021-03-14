@@ -25,7 +25,6 @@ dd {
   margin: 0;
 }
 body {
-  min-height: 100vh;
   scroll-behavior: smooth;
   text-rendering: optimizeSpeed;
   line-height: 1.5;
@@ -60,8 +59,42 @@ select {
 }
 a {
   outline: none;
-  color: inherit;
 }
 button {
   outline: none;
+}
+
+body, a {
+  color: $shade75;
+  font-weight: normal;
+  font-size: 14px;
+  line-height: 24px;
+}
+
+h1 {
+  color: $shade100;
+  font-weight: bold;
+  font-size: 24px;
+  line-height: 29px;
+}
+
+h2 {
+  color: $shade100;
+  font-weight: bold;
+  font-size: 19px;
+  line-height: 23px;
+}
+
+h3 {
+  color: $shade100;
+  font-weight: bold;
+  text-transform: uppercase;
+  font-size: 12px;
+  line-height: 15px;
+}
+
+.greyLogo {
+  position: absolute;
+  left: 30px;
+  top: 30px;
 }

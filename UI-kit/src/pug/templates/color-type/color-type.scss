@@ -1,0 +1,15 @@
+.type__item {
+    display: flex;
+    width:420px;
+    margin-bottom: 50px;
+
+    &:last-child {
+        margin: 0;
+    }
+}
+
+.type__description {
+    color: $shade25;
+    font-weight: normal;
+    margin-right: 30px;
+}

@@ -2,7 +2,15 @@
 @import "./normalize.scss";
 @import "./fonts.scss";
 
-h1 {
-    color: $shade100;
-    font-weight: bold;
-}
+//Pages
+@import "../pug/pages/index/index.scss";
+@import "../pug/pages/color/color.scss";
+@import '../pug/pages/elements/elements.scss';
+
+//Templates
+@import "src/pug/templates/color-item/color-item.scss";
+@import "src/pug/templates/color-type/color-type.scss";
+
+//Components
+@import "components/textField/textField.scss";
+@import "components/dropdown/dropdown.scss";

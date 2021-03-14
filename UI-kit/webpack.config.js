@@ -5,7 +5,6 @@ const MiniCssExtractPlugin = require('mini-css-extract-plugin');
 const OptimizeCssAssetWebpackPlugin = require('optimize-css-assets-webpack-plugin');
 const TerserWebpackPlugin = require('terser-webpack-plugin');
 const { BundleAnalyzerPlugin } = require('webpack-bundle-analyzer');
-const fs = require('fs');
 
 const isDev = process.env.NODE_ENV === 'development';
 const isProd = !isDev;
@@ -77,12 +76,15 @@ const plugins = () => {
   const base = [
     new HTMLWebpackPlugin({
       filename: 'color.html',
-      template: './pages/colorType.pug',
-      outputPath: 'pages/'
+      template: './pug/pages/color/color.pug'
+    }),
+    new HTMLWebpackPlugin({
+      filename: 'elements.html',
+      template: './pug/pages/elements/elements.pug'
     }),
     new HTMLWebpackPlugin({
       filename: 'index.html',
-      template: './pages/index.pug'
+      template: './pug/pages/index/index.pug'
     }),
     new CleanWebpackPlugin(),
     new MiniCssExtractPlugin({
@@ -108,10 +110,10 @@ module.exports = {
     path: path.resolve(__dirname, 'dist'),
   },
   resolve: {
-    extensions: ['.js', '.json', '.png'],
+    extensions: ['.js', '.json'],
     alias: {
-      src: path.resolve(__dirname, 'src/'),
-      components: path.resolve(__dirname, 'src/components/'),
+      src: path.resolve(__dirname, 'src'),
+      components: path.resolve(__dirname, 'src/components'),
     },
   },
   optimization: optimization(),

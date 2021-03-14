@@ -1,0 +1,21 @@
+.colors__item {
+    display: flex;
+    align-items: center;
+    margin-bottom: 20px;
+
+    &:last-child {
+        margin: 0;
+    }
+}
+.colors__square {
+    width: 70px;
+    height:70px;
+    border-radius: 6px;
+    margin-right: 40px;
+}
+.colors__title {
+    font-size: 19px;
+    line-height: 28px;
+    font-weight: bold;
+    color: $shade100;
+}

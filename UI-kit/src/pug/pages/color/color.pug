@@ -1,0 +1,25 @@
+extends ../../layouts/main
+include ../../templates/template
+
+block variables
+    - var title = 'Color&Type';
+
+block content
+    .color-container
+        .colors
+            +colors__item('rgba(31, 32, 65, 1)', 'Dark Shade 100%', '#1F2041')
+            +colors__item('rgba(31, 32, 65, 0.75)', 'Dark Shade 75%', '#1F2041')
+            +colors__item('rgba(31, 32, 65, 0.5)', 'Dark Shade 50%', '#1F2041')
+            +colors__item('rgba(31, 32, 65, 0.25)', 'Dark Shade 25%', '#1F2041')
+            +colors__item('rgba(31, 32, 65, 0.05)', 'Dark Shade 5%', '#1F2041')
+            +colors__item('rgba(188, 156, 255, 1)', 'Purple', '#BC9CFF')
+            +colors__item('rgb(111, 207, 151, 1)', 'Green', '#6FCF97')
+        .type
+            +colors__type('h1', 'H1','This one is the sub-section or widget title')
+            +colors__type('h2', 'H2','Next one is the item title inside widgets')
+            +colors__type('h3', 'H3','This is a label or CTA text')
+            +colors__type(
+                'p', 
+                'Body', 
+                'This is the body text which is used for most of the design, like paragraphs, lists, etc.'
+            )
