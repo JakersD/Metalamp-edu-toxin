@@ -1,2 +1,17 @@
-mixin dropdown()
+mixin dropdown(placeholder, ...title)
     .dropdown
+        .dropdown__select.dropdown__select_open
+            p.dropdown__placeholder= placeholder
+            img(class="dropdown__arrow" src="src/img/arrowMore.svg", alt="Узнать больше")
+        ul.dropdown__menu.dropdown__menu_open
+            each itemTitle in title
+                li.dropdown__item
+                    p.dropdown__item-title= itemTitle
+                    .dropdown__count-block
+                        .dropdown__minus.dropdown__minus_disabled
+                        p.dropdown__count 0
+                        .dropdown__plus
+            if title
+                button.dropdown__clear.dropdown__clear--hidden Очистить
+                button.dropdown__apply Применить
+

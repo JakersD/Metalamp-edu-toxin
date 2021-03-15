@@ -1,17 +1,17 @@
 .elements__container {
-    max-width: 1140px;
-    margin: 0 auto;
-    padding: 145px 20px;
-    display: flex;
-    justify-content: space-between;
+  max-width: 1140px;
+  margin: 0 auto;
+  padding: 145px 20px;
+  display: flex;
+  justify-content: space-between;
 }
 
 .elements__block {
-    display: flex;
-    justify-content: space-between;
+  display: flex;
+  justify-content: space-between;
 }
 
 .elements__column {
-    display: flex;
-    flex-direction: column;
+  display: flex;
+  flex-direction: column;
 }

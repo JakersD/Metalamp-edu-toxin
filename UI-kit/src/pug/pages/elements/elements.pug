@@ -1,5 +1,5 @@
 extends ../../layouts/main
-include ../../../components/textField/textField
+include ../../../components/components
 
 block variables
     - var title = 'Form Elements';
@@ -9,6 +9,4 @@ block content
         .elements__block
             .elements__column
                 +textField('textId', 'text field', 'Email', 'mail')
-        .elements__block
-
-        .elements__block
+                +dropdown('Сколько гостей', 'Титуль', 'Титуль2')
