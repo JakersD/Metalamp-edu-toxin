@@ -101,10 +101,13 @@ const changePlaceholderDefault = (e, allcount) => {
     case allcount === 0:
       placeholder.innerHTML = e.currentTarget.dataset.startplace;
       break;
-    case allcount === 1:
+    case arr.length === 1:
       placeholder.innerHTML = arr.join(', ');
       break;
-    case allcount > 1:
+    case arr.length === 2:
+      placeholder.innerHTML = arr.slice(0, 2).join(', ');
+      break;
+    case arr.length > 2:
       placeholder.innerHTML = arr.slice(0, 2).join(', ') + '...';
       break;
   }
