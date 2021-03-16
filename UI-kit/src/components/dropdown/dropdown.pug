@@ -1,16 +1,16 @@
-mixin dropdown(label, type, placeholder, ...title)
+mixin dropdown(label, def, placeholder, ...title)
     .dropdown
         if label
             p.component-label= label
-        .dropdown__select.dropdown__select_open
+        .dropdown__select
             p.dropdown__placeholder= placeholder
             img(class="dropdown__arrow" src="src/img/arrowMore.svg", alt="Узнать больше")
-        ul(class="dropdown__menu dropdown__menu_open" data-droptype=type)
+        ul(class="dropdown__menu " data-droptype=def data-startplace= placeholder)
             each itemTitle in title
                 li.dropdown__item
                     p.dropdown__item-title= itemTitle
                     .dropdown__count-block
-                        .dropdown__minus.dropdown__minus_disabled
+                        .dropdown__minus.dropdown__minus--disabled
                         p.dropdown__count 0
                         .dropdown__plus
             if title

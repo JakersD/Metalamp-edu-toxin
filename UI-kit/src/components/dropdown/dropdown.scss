@@ -1,3 +1,7 @@
+.dropdown {
+  position: relative;
+}
+
 .dropdown__select {
   display: flex;
   justify-content: space-between;
@@ -14,7 +18,7 @@
   }
 }
 
-.dropdown__select_open {
+.dropdown__select--open {
   border: 1px solid $shade50;
 }
 
@@ -24,12 +28,18 @@ ul.dropdown__menu {
   border-right: 1px solid $shade25;
   border-radius: 0 0 4px 4px;
   padding: 7px 7px 12px 15px;
+  z-index: 100;
+  width: 100%;
+  background-color: white;
+  display: none;
 }
 
-ul.dropdown__menu_open {
+ul.dropdown__menu--open {
   border-left-color: $shade50;
   border-bottom-color: $shade50;
   border-right-color: $shade50;
+  display: block;
+  position: absolute;
 }
 
 .dropdown__item {
@@ -65,7 +75,7 @@ ul.dropdown__menu_open {
   cursor: pointer;
 }
 
-.dropdown__minus_disabled {
+.dropdown__minus--disabled {
   border-color: $shade25;
   cursor: auto;
 
