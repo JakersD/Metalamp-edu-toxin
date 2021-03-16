@@ -1,16 +1,17 @@
-@import "./vars.scss";
-@import "./normalize.scss";
-@import "./fonts.scss";
+@import './vars.scss';
+@import './normalize.scss';
+@import './fonts.scss';
 
 //Pages
-@import "../pug/pages/index/index.scss";
-@import "../pug/pages/color/color.scss";
+@import '../pug/pages/index/index.scss';
+@import '../pug/pages/color/color.scss';
 @import '../pug/pages/elements/elements.scss';
 
 //Templates
-@import "src/pug/templates/color-item/color-item.scss";
-@import "src/pug/templates/color-type/color-type.scss";
+@import 'src/pug/templates/color-item/color-item.scss';
+@import 'src/pug/templates/color-type/color-type.scss';
 
 //Components
-@import "components/textField/textField.scss";
-@import "components/dropdown/dropdown.scss";
+@import 'components/textField/textField.scss';
+@import 'components/dropdown/dropdown.scss';
+@import 'components/label/component-label';

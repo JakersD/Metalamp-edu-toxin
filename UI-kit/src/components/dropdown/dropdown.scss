@@ -23,7 +23,7 @@ ul.dropdown__menu {
   border-bottom: 1px solid $shade25;
   border-right: 1px solid $shade25;
   border-radius: 0 0 4px 4px;
-  padding: 7px 7px 0 15px;
+  padding: 7px 7px 12px 15px;
 }
 
 ul.dropdown__menu_open {
@@ -67,6 +67,7 @@ ul.dropdown__menu_open {
 
 .dropdown__minus_disabled {
   border-color: $shade25;
+  cursor: auto;
 
   &::after {
     color: $shade25;
@@ -98,4 +99,32 @@ ul.dropdown__menu_open {
   font-weight: bold;
   color: $shade100;
   padding: 0 12px;
+  width: 32px;
+  //Отмена выделения при двойном нажатии мыши
+  -webkit-user-select: none;
+  -ms-user-select: none;
+  -moz-user-select: none;
+}
+
+.dropdown__btns {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding-top: 12px;
+}
+
+.dropdown__btns button {
+  border: none;
+  background-color: inherit;
+  padding: 0;
+  color: $purple;
+  text-transform: uppercase;
+  font-weight: bold;
+  font-size: 12px;
+  line-height: 15px;
+  cursor: pointer;
+}
+
+.dropdown__clear--hidden {
+  visibility: hidden;
 }

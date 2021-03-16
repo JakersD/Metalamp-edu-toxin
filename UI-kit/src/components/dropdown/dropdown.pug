@@ -1,9 +1,11 @@
-mixin dropdown(placeholder, ...title)
+mixin dropdown(label, type, placeholder, ...title)
     .dropdown
+        if label
+            p.component-label= label
         .dropdown__select.dropdown__select_open
             p.dropdown__placeholder= placeholder
             img(class="dropdown__arrow" src="src/img/arrowMore.svg", alt="Узнать больше")
-        ul.dropdown__menu.dropdown__menu_open
+        ul(class="dropdown__menu dropdown__menu_open" data-droptype=type)
             each itemTitle in title
                 li.dropdown__item
                     p.dropdown__item-title= itemTitle
@@ -12,6 +14,7 @@ mixin dropdown(placeholder, ...title)
                         p.dropdown__count 0
                         .dropdown__plus
             if title
-                button.dropdown__clear.dropdown__clear--hidden Очистить
-                button.dropdown__apply Применить
+                .dropdown__btns
+                    button.dropdown__clear.dropdown__clear--hidden Очистить
+                    button.dropdown__apply Применить
 

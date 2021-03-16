@@ -15,3 +15,8 @@
   display: flex;
   flex-direction: column;
 }
+
+.elements__column .textField__input,
+.elements__column .dropdown {
+  margin-bottom: 20px;
+}
