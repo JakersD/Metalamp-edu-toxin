@@ -1,0 +1,40 @@
+.dropdownDate {
+  display: flex;
+  justify-content: space-between;
+}
+
+.datePicker {
+  border: 1px solid $shade25;
+  padding: 12px 15px;
+  border-radius: 4px;
+  outline: none;
+  position: relative;
+
+  &::before {
+    content: '';
+    position: absolute;
+    background-image: 'src/img/arrowMore.svg';
+    width: 20px;
+    height: 20px;
+    right: 0;
+  }
+
+  &::placeholder {
+    color: $shade75;
+  }
+  &:first-child {
+    margin-right: 20px;
+  }
+}
+
+//air datepicker
+.datepicker--pointer {
+  display: none;
+}
+
+.datepicker--nav-title {
+  color: $shade100;
+  font-size: 19px;
+  line-height: 23px;
+  font-weight: bold;
+}

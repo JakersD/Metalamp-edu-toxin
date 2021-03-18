@@ -5,6 +5,7 @@ const MiniCssExtractPlugin = require('mini-css-extract-plugin');
 const OptimizeCssAssetWebpackPlugin = require('optimize-css-assets-webpack-plugin');
 const TerserWebpackPlugin = require('terser-webpack-plugin');
 const { BundleAnalyzerPlugin } = require('webpack-bundle-analyzer');
+const webpack = require('webpack');
 
 const isDev = process.env.NODE_ENV === 'development';
 const isProd = !isDev;
@@ -76,19 +77,24 @@ const plugins = () => {
   const base = [
     new HTMLWebpackPlugin({
       filename: 'color.html',
-      template: './pug/pages/color/color.pug'
+      template: './pug/pages/color/color.pug',
     }),
     new HTMLWebpackPlugin({
       filename: 'elements.html',
-      template: './pug/pages/elements/elements.pug'
+      template: './pug/pages/elements/elements.pug',
     }),
     new HTMLWebpackPlugin({
       filename: 'index.html',
-      template: './pug/pages/index/index.pug'
+      template: './pug/pages/index/index.pug',
     }),
     new CleanWebpackPlugin(),
     new MiniCssExtractPlugin({
       filename: filename('css'),
+    }),
+    new webpack.ProvidePlugin({
+      $: 'jquery',
+      jQuery: 'jquery',
+      'window.jQuery': 'jquery',
     }),
   ];
 
