@@ -9,6 +9,7 @@
   border-radius: 4px;
   outline: none;
   position: relative;
+  width: 150px;
 
   &::before {
     content: '';
@@ -28,13 +29,48 @@
 }
 
 //air datepicker
+.datepicker {
+  width: 288px;
+  padding: 15px;
+}
+
 .datepicker--pointer {
   display: none;
 }
 
-.datepicker--nav-title {
-  color: $shade100;
-  font-size: 19px;
-  line-height: 23px;
+.datepicker--days-names {
+  margin: 0 !important;
   font-weight: bold;
+}
+
+.datepicker--day-name {
+  color: #bc9cff !important;
+}
+
+.datepicker--nav {
+  border: none !important;
+  margin: 20px 0 30px;
+
+  &-title {
+    color: $shade100;
+    font-size: 19px;
+    line-height: 23px;
+    font-weight: bold;
+  }
+}
+
+.datepicker--cell {
+  border-radius: 50%;
+  height: 40px;
+}
+
+.airNext,
+.airPrev {
+  fill: #bc9cff !important;
+  stroke: #bc9cff !important;
+  stroke-width: 1px !important;
+}
+
+.airArrow {
+  height: 16px !important;
 }
