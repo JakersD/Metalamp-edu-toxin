@@ -39,7 +39,7 @@
 }
 
 .datepicker--days-names {
-  margin: 0 !important;
+  margin: 0 0 10px !important;
   font-weight: bold;
 }
 
@@ -62,6 +62,32 @@
 .datepicker--cell {
   border-radius: 50%;
   height: 40px;
+}
+
+//Today
+.datepicker--cell.-current- {
+  background: linear-gradient(180deg, #6fcf97 0%, #66d2ea 100%);
+  font-weight: bold;
+  color: #fff;
+}
+
+//Current Day
+.datepicker--cell.-selected-,
+.datepicker--cell.-selected-.-current- {
+  background: linear-gradient(180deg, #bc9cff 0%, #8ba4f9 100%);
+  border-radius: 50%;
+}
+
+//InRange
+.datepicker--cell.-in-range- {
+  background: linear-gradient(180deg, rgba(188, 156, 255, 0.25) 0%, rgba(139, 164, 249, 0.25) 100%);
+  color: $shade50;
+}
+
+.datepicker--cell-day.-other-month-,
+.datepicker--cell-year.-other-decade-,
+.datepicker--cell.-disabled- {
+  color: $shade25;
 }
 
 .airNext,
