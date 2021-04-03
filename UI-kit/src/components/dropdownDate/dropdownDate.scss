@@ -4,6 +4,15 @@
 }
 
 .datePicker {
+  cursor: pointer;
+}
+
+.datePicker__right {
+  cursor: auto;
+}
+
+.datePicker,
+.datePicker__right {
   border: 1px solid $shade25;
   padding: 12px 15px;
   border-radius: 4px;
@@ -28,7 +37,7 @@
   }
 }
 
-//air datepicker
+//-----------air datepicker-------------------
 .datepicker {
   width: 288px;
   padding: 15px;
@@ -76,12 +85,84 @@
 .datepicker--cell.-selected-.-current- {
   background: linear-gradient(180deg, #bc9cff 0%, #8ba4f9 100%);
   border-radius: 50%;
+  font-weight: bold;
+}
+
+//inRange входящий в текущую дату ОТ (подложка)
+.datepicker--cell.-range-from-::before {
+  content: '';
+  width: 50%;
+  height: 100%;
+  position: absolute;
+  left: 50%;
+  background: linear-gradient(180deg, rgba(188, 156, 255, 0.25) 0%, rgba(139, 164, 249, 0.25) 100%);
+  z-index: -1;
+}
+
+//inRange входящий в текущую дату К (подложка)
+.datepicker--cell.-range-to-::after {
+  content: '';
+  width: 50%;
+  height: 100%;
+  position: absolute;
+  right: 50%;
+  background: linear-gradient(180deg, rgba(188, 156, 255, 0.25) 0%, rgba(139, 164, 249, 0.25) 100%);
+  z-index: -1;
+}
+
+//Выбор новой даты в диапозоне ОТ
+.datepicker--cell.-range-from- {
+  background: linear-gradient(180deg, #bc9cff 0%, #8ba4f9 100%);
+  border-radius: 50%;
+  color: #fff !important;
+  font-weight: bold;
+  border: none;
+}
+
+//Выбор новой даты в диапозоне К
+.datepicker--cell.-range-to- {
+  background: linear-gradient(180deg, #bc9cff 0%, #8ba4f9 100%);
+  border-radius: 50%;
+  color: #fff !important;
+  font-weight: bold;
+  border: none;
+}
+
+//inRange focus
+.datepicker--cell.-in-range-.-focus- {
+  background: linear-gradient(180deg, rgba(188, 156, 255, 0.3) 0%, rgba(139, 164, 249, 0.3) 100%);
+}
+
+//selectedFocus
+.datepicker--cell.-selected-.-focus- {
+  background: linear-gradient(180deg, rgba(188, 156, 255, 0.75) 0%, rgba(139, 164, 249, 0.75) 100%);
 }
 
 //InRange
 .datepicker--cell.-in-range- {
   background: linear-gradient(180deg, rgba(188, 156, 255, 0.25) 0%, rgba(139, 164, 249, 0.25) 100%);
   color: $shade50;
+}
+
+.-selected-.datepicker--cell-day.-other-month-,
+.-selected-.datepicker--cell-year.-other-decade- {
+  background: linear-gradient(180deg, #bc9cff 0%, #8ba4f9 100%);
+}
+
+.-in-range-.datepicker--cell-day.-other-month-,
+.-in-range-.datepicker--cell-year.-other-decade- {
+  color: $shade25;
+  background: linear-gradient(180deg, rgba(188, 156, 255, 0.25) 0%, rgba(139, 164, 249, 0.25) 100%);
+}
+
+.-in-range-.-focus-.datepicker--cell-day.-other-month-,
+.-in-range-.-focus-.datepicker--cell-year.-other-decade- {
+  background: linear-gradient(180deg, rgba(188, 156, 255, 0.3) 0%, rgba(139, 164, 249, 0.3) 100%);
+}
+
+.-selected-.-focus-.datepicker--cell-day.-other-month-,
+.-selected-.-focus-.datepicker--cell-year.-other-decade- {
+  background: linear-gradient(180deg, rgba(188, 156, 255, 0.75) 0%, rgba(139, 164, 249, 0.75) 100%);
 }
 
 .datepicker--cell-day.-other-month-,
