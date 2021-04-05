@@ -11,23 +11,13 @@
   cursor: auto;
 }
 
-.datePicker,
-.datePicker__right {
+.dropdownDate__input {
   border: 1px solid $shade25;
   padding: 12px 15px;
   border-radius: 4px;
   outline: none;
   position: relative;
-  width: 150px;
-
-  &::before {
-    content: '';
-    position: absolute;
-    background-image: 'src/img/arrowMore.svg';
-    width: 20px;
-    height: 20px;
-    right: 0;
-  }
+  cursor: pointer;
 
   &::placeholder {
     color: $shade75;
@@ -35,6 +25,47 @@
   &:first-child {
     margin-right: 20px;
   }
+}
+
+.dropdownDate__pick {
+  display: flex;
+  flex-direction: column;
+  margin-right: 20px;
+  width: 100%;
+  position: relative;
+
+  &:hover {
+    .dropdownDate__input {
+      border: 1px solid rgba(31, 32, 65, 0.5);
+    }
+  }
+
+  &::after {
+    content: '';
+    position: absolute;
+    background: url('../../src/img/arrowMore.svg') no-repeat center;
+    width: 20px;
+    height: 20px;
+    bottom: 15px;
+    right: 12px;
+  }
+
+  &:last-child {
+    margin: 0;
+  }
+}
+
+.dropdownDate__label {
+  color: $shade100;
+  font-size: 12px;
+  line-height: 15px;
+  text-transform: uppercase;
+  font-weight: bold;
+  margin-bottom: 6px;
+}
+
+#datepicker__end {
+  cursor: auto;
 }
 
 //-----------air datepicker-------------------

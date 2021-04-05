@@ -1,9 +1,13 @@
 mixin dropdownDate(multiInput, label1, label2)
     .dropdownDate
         if multiInput
-            .datedrop
-                label.datepicker__label= label1
-                input(class="datePicker" type="text" id="datepicker__start" placeholder="ДД.ММ.ГГГГ" readonly)
-            .datedrop
-                label.datepicker__label= label2
-                input(class="datePicker__right" type="text" id="datepicker__end" placeholder="ДД.ММ.ГГГГ" readonly)
+            .dropdownDate__pick
+                label.dropdownDate__label= label1
+                input(class="dropdownDate__input" type="text" id="datepicker__start" placeholder="ДД.ММ.ГГГГ" readonly)
+            .dropdownDate__pick
+                label.dropdownDate__label= label2
+                input(class="dropdownDate__input" type="text" id="datepicker__end" placeholder="ДД.ММ.ГГГГ" readonly)
+        else
+            .dropdownDate__pick
+                label.dropdownDate__label= label1
+                input(class="dropdownDate__input" type="text" id="datepicker__single" placeholder="ДД ММ - ДД ММ" readonly)
