@@ -1,0 +1,6 @@
+mixin radiobtns(radioItems, name)
+    if (radioItems)
+        .radiobtn
+            each item in radioItems
+                input(class="radiobtn__input" type="radio" name=name id=item.id value=item.value)
+                label(class="radiobtn__label" for=item.id)= item.label 

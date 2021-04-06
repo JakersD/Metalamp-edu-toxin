@@ -13,3 +13,23 @@ block content
                 +dropdown('dropdown', true, 'Выберите номер', 'Спальни', 'Кровати', 'Ванные комнаты')
                 +dropdownDate(true, "Прибытие", "Отбытие")
                 +dropdownDate(false, "Filter date dropdown")
+                +textField-sub('Subscription text field', 'Email')
+            .elements__column
+                .checkboxes
+                    p.component-label checkbox buttons
+                    +checkbox('Можно курить', 'option1', 'isSmoking')
+                    +checkbox('Можно с питомцами', 'option2', 'isAnimal')
+                    +checkbox('Можно пригласить гостей (до 10 человек)', 'option3', 'isGuest')
+                .radio
+                    p.component-label radio buttons
+                    +radiobtns([{label: 'Мужчина', value: 'isMale', id: "male1"}, {label: 'Женщина', value: 'isFemale', id: "female1"}], name="sex")
+                .toggleBtns
+                    p.component-label toggle
+                    +toggle('Получать спецпредложения', 'option4', 'isSpam')
+                    +toggle('Получать спецпредложения', 'option5', 'isSpam1')
+                .likeBtns
+                    p.component-label like button
+                    +like()
+                    +like()
+                .rateBtns
+                    p.component-label rate button

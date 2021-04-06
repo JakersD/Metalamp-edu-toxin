@@ -1,0 +1,29 @@
+.textField-sub {
+  position: relative;
+
+  a {
+    position: absolute;
+    bottom: 12px;
+    right: 15px;
+  }
+}
+
+.textField-sub__input {
+  border: 1px solid rgba(31, 32, 65, 0.25);
+  border-radius: 4px;
+  font-size: 14px;
+  line-height: 18px;
+  padding: 12px 0 12px 15px;
+  color: $shade75;
+  outline: none;
+  width: 100%;
+
+  &:hover,
+  &:focus {
+    border: 1px solid rgba(31, 32, 65, 0.5);
+  }
+
+  &::placeholder {
+    color: $shade25;
+  }
+}

@@ -1,0 +1,35 @@
+.checkbox {
+  display: flex;
+  align-items: center;
+
+  &__input {
+    position: absolute;
+    z-index: -1;
+    opacity: 0;
+    cursor: pointer;
+  }
+
+  &__label {
+    display: flex;
+    align-items: center;
+    position: relative;
+    cursor: pointer;
+
+    &::before {
+      content: '';
+      display: inline-block;
+      width: 20px;
+      height: 20px;
+      border: 1px solid $shade25;
+      margin-right: 10px;
+      border-radius: 4px;
+    }
+  }
+}
+
+.checkbox__input:checked + label::before {
+  border: 1px solid $purple;
+  background: url('data:image/svg+xml,%3Csvg%20width%3D%2210%22%20height%3D%2211%22%20viewBox%3D%220%200%2010%2011%22%20fill%3D%22none%22%20xmlns%3D%22http%3A%2F%2Fwww.w3.org%2F2000%2Fsvg%22%3E%0A%3Cpath%20d%3D%22M1.46439%204.40768L5.70703%208.65032L4.29282%2010.0645L0.0501771%205.82189L1.46439%204.40768Z%22%20fill%3D%22url(%23paint0_linear)%22%2F%3E%0A%3Cpath%20d%3D%22M8.53546%202.99347L9.94967%204.40768L4.29282%2010.0645L2.8786%208.65032L8.53546%202.99347Z%22%20fill%3D%22url(%23paint1_linear)%22%2F%3E%0A%3Cdefs%3E%0A%3ClinearGradient%20id%3D%22paint0_linear%22%20x1%3D%227.82835%22%20y1%3D%222.28636%22%20x2%3D%222.1715%22%20y2%3D%227.94321%22%20gradientUnits%3D%22userSpaceOnUse%22%3E%0A%3Cstop%20stop-color%3D%22%23BC9CFF%22%2F%3E%0A%3Cstop%20offset%3D%221%22%20stop-color%3D%22%238BA4F9%22%2F%3E%0A%3C%2FlinearGradient%3E%0A%3ClinearGradient%20id%3D%22paint1_linear%22%20x1%3D%227.82835%22%20y1%3D%222.28636%22%20x2%3D%222.1715%22%20y2%3D%227.94321%22%20gradientUnits%3D%22userSpaceOnUse%22%3E%0A%3Cstop%20stop-color%3D%22%23BC9CFF%22%2F%3E%0A%3Cstop%20offset%3D%221%22%20stop-color%3D%22%238BA4F9%22%2F%3E%0A%3C%2FlinearGradient%3E%0A%3C%2Fdefs%3E%0A%3C%2Fsvg%3E');
+  background-position: 4px 3px;
+  background-repeat: no-repeat;
+}

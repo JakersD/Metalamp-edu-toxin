@@ -9,6 +9,7 @@
 .elements__block {
   display: flex;
   justify-content: space-between;
+  width: 100%;
 }
 
 .elements__column {
@@ -20,4 +21,15 @@
 .elements__column .dropdown,
 .elements__column .dropdownDate {
   margin-bottom: 20px;
+}
+.elements__column .checkboxes,
+.elements__column .radio,
+.elements__column .toggleBtns,
+.elements__column .likeBtns {
+  margin-bottom: 40px;
+}
+
+.checkboxes {
+  display: flex;
+  flex-direction: column;
 }
